@@ -23,7 +23,7 @@
         <div class="col-md-6 left-box">
                 <div class="row align-items-center">
                     <div class="header-text text-center mb-4">
-                        <p>login</p>
+                        <h3>login</h3>
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
@@ -32,7 +32,7 @@
                         <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password">
                     </div>
                     <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-primary w-100">Login</button>
+                        <a href="#" class="btn btn-primary w-100">Login</a>
                     </div>
                     <div class="text-end mb-3">
                         <a href="#">Daftar Sekarang</a>
