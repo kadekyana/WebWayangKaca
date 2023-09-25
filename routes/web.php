@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\sandiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('index');
 });
 
+// Route::get('/', function () {
+//     return view('login');
+// });
+
 Route::get('/', function () {
-    return view('login');
+    return view('produk');
 });
+
+
+// Route::get('/', [sandiController::class, 'index']
+//     );

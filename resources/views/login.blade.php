@@ -13,14 +13,22 @@
         .box-area{
             width: 930px;
         }
+
+        .left-box{
+            padding: 40px 30px 40px 40px
+        }
     </style>
 </head>
 <body>
 
+ {{-- <h1>data mahasiswa</h1>
+ @for ($i = 1; $i < count($data); $i++ )
+    <p>{{$i+1}} {{$data($i)}}</p>
+@endfor --}}
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="row border rounder-5 p-3 bg-white shadow box-area">
-        <div class="col-md-6 left-box">
+        <div class="row border rounded-5 p-3 bg-white shadow box-area">
+            <div class="col-md-6 left-box">
                 <div class="row align-items-center">
                     <div class="header-text text-center mb-4">
                         <h3>login</h3>
@@ -41,13 +49,12 @@
                 </div>
             </div>
             
-            <div class="col-md-6 right-box ">
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column right-box " style="background: #9f9b9b">
                 <div class="featured-image">
-                    <img src="image/login.png" class="img-fluid" width="250 px">
+                    <img src="{{ asset('image/login.jpeg') }}" class="img-fluid" width="300 px">
                 </div>
             </div>
 
-           
         </div>
     </div>
 
