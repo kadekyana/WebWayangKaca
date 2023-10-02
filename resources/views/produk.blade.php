@@ -7,6 +7,41 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style>
+        .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        width: 200px;
+        border-radius: 10px;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .card-info {
+        margin: 0 10px 30px 10px;
+      }
+      .card-info a {
+        text-decoration: none;
+        background-color: blue;
+        padding: 10px 30px;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .card-info a:hover {
+        background-color: aliceblue;
+        color: black;
+        border: 1px solid;
+      }
+
+    </style>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -47,7 +82,103 @@
         </div>
     </nav>
 
-    <nav class="container bg-dark"></nav>
+    {{-- produk --}}
+    <div class="container p-5 d-flex justify-content-center align-items-center">
+        <div class="row p-5">
+            <h2 class=" mt-5 text-start">Toko Wayang Ramayana</h2>
+            <hr>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <img src="{{ asset('image/hd.png') }}" alt="" />
+                <div class="card-info">
+                    <h2>Dwi Coders</h2>
+                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                    <a href="">OTW</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <img src="{{ asset('image/hd.png') }}" alt="" />
+                <div class="card-info">
+                    <h2>Dwi Coders</h2>
+                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                    <a href="">OTW</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <img src="{{ asset('image/hd.png') }}" alt="" />
+                <div class="card-info">
+                    <h2>Dwi Coders</h2>
+                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                    <a href="">OTW</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-center align-items-center">
+                <div class="card">
+                <img src="{{ asset('image/hd.png') }}" alt="" />
+                <div class="card-info">
+                    <h2>Dwi Coders</h2>
+                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                    <a href="">OTW</a>
+                </div>
+                </div>
+            </div>
+
+            {{-- jenis produk 2 --}}
+            <div class="row">
+                <h2 class=" mt-5 text-start">Toko Wayang Ramayana</h2>
+                <hr>
+                <div class="col-3 d-flex justify-content-center align-items-center">
+                    <div class="card">
+                    <img src="{{ asset('image/hd.png') }}" alt="" />
+                    <div class="card-info">
+                        <h2>Dwi Coders</h2>
+                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                        <a href="">OTW</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center">
+                    <div class="card">
+                    <img src="{{ asset('image/hd.png') }}" alt="" />
+                    <div class="card-info">
+                        <h2>Dwi Coders</h2>
+                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                        <a href="">OTW</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center">
+                    <div class="card">
+                    <img src="{{ asset('image/hd.png') }}" alt="" />
+                    <div class="card-info">
+                        <h2>Dwi Coders</h2>
+                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                        <a href="">OTW</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center">
+                    <div class="card">
+                    <img src="{{ asset('image/hd.png') }}" alt="" />
+                    <div class="card-info">
+                        <h2>Dwi Coders</h2>
+                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
+                        <a href="">OTW</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </div>
+    </div>
     
 </body>
 </html>

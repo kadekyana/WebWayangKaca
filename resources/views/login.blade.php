@@ -17,6 +17,11 @@
         .left-box{
             padding: 40px 30px 40px 40px
         }
+
+        .featured-image img-fluid{
+            height: auto;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -49,9 +54,9 @@
                 </div>
             </div>
             
-            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column right-box " style="background: #9f9b9b">
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column right-box ">
                 <div class="featured-image">
-                    <img src="{{ asset('image/login.jpeg') }}" class="img-fluid" width="300 px">
+                    <img src="{{ asset('image/hd.png') }}" class="img-fluid">
                 </div>
             </div>
 
