@@ -40,6 +40,61 @@
         border: 1px solid;
       }
 
+      .chart{
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 500px;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+        border: 1px solid;
+    
+      }
+
+      .chart h1{
+        color: #000000;
+        font-weight: 50;
+        font-size: 30px;
+        margin: 0;
+        padding: 0 20px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+      }
+
+      .chart .checkout{
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .chart .checkout div{
+        background-color: rgb(161, 121, 26);
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .chart .checkout div:nth-child(2){
+        background-color: #1c1f25;
+        color: #fff;
+      }
+
+      .active .chart{
+        left: calc(110% - 500px);
+      }
+
+      .active .container{
+        transform: translateX(-200px);
+      }
+
     </style>
 
 </head>
@@ -72,7 +127,7 @@
                     <li class="nav-item">
                         <a class="nav-link" style="font-weight:700"  href="#">Login</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="shopping">
                         <a class="nav-link" href="#">
                             <i class="bi bi-bag-heart-fill" ></i>
                         </a>
@@ -80,7 +135,19 @@
                 </ul>
             </div>
         </div>
+
+        {{-- chart --}}
+        <nav class="chart">
+            <h1>Chart</h1>
+            <ul class="listCard"></ul>
+            <div class="checkout">
+                <div class="total">0</div>
+                <div class="closeShopping">close</div>
+            </div>
+        </nav>
+
     </nav>
+
 
     {{-- produk --}}
     <div class="container p-5 d-flex justify-content-center align-items-center">
@@ -93,7 +160,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <a href="">Detail</a>
                 </div>
                 </div>
             </div>
@@ -103,7 +170,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <a href="">Detail</a>
                 </div>
                 </div>
             </div>
@@ -113,7 +180,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <a href="">Detail</a>
                 </div>
                 </div>
             </div>
@@ -123,7 +190,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <a href="">Detail</a>
                 </div>
                 </div>
             </div>
@@ -138,7 +205,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <a href="">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -148,7 +215,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <a href="">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -158,7 +225,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <a href="">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -168,7 +235,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <a href="">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -179,6 +246,7 @@
         
     </div>
     </div>
-    
+    {{-- link java --}}
+    <script src="js/chart.js"></script>
 </body>
 </html>
