@@ -13,16 +13,18 @@ use App\Http\Controllers\sandiController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/', function () {
+
+Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/', function () {
+Route::get('/produk', function () {
     return view('produk');
+});
+
+Route::get('/', function () {
+    return view('index');
 });
 
 

@@ -56,7 +56,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Product</a>
+                        <a class="nav-link active" aria-current="page" href="/produk">Product</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">History</a>
@@ -68,7 +68,7 @@
             <div class="d-flex me-5">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight:700"  href="#">Login</a>
+                        <a class="nav-link" style="font-weight:700"  href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">

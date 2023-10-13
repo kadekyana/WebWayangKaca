@@ -39,63 +39,75 @@
         color: black;
         border: 1px solid;
       }
+      
 
+      /* chart */
       .chart{
         position: fixed;
-        top: 0;
+        top: 60px;
         left: 100%;
-        width: 500px;
-        height: 100%;
+        width: 340px;
+        height: 80%;
         background-color: rgb(255, 255, 255);
         transition: 0.5s;
         border: 1px solid;
+        border-radius: 10px;
     
       }
 
-      .chart h1{
-        color: #000000;
-        font-weight: 50;
-        font-size: 30px;
-        margin: 0;
-        padding: 0 20px;
-        height: 80px;
-        display: flex;
+
+       .chart-box{
+        display: grid;
+        grid-template-columns: 32% 50% 18%;
         align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .chart-img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        padding: 10px;
+      }
+
+      .total{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+        border-top: 1px solid;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .total-title{
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .total-price{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .detail-box{
+        display: grid;
+        row-gap: 0.5rem;
       }
 
       .chart .checkout{
         position: absolute;
         bottom: 0;
-        width: 70%;
-        height: 70px;
-        /* display: grid;  */
-        /* grid-template-columns: repeat(2, 1fr); */
-        /* background-color: #000000; */
-      }
-
-      /* .chart .checkout div{
-        background-color: rgb(161, 121, 26);
         width: 100%;
         height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        cursor: pointer;
-      } */
 
-      .chart .checkout a {
-        /* text-decoration: none;
-        background-color: blue; */
-        padding: 10px 30px;
-        border-radius: 10px;
-        /* color: white; */
       }
 
-      /* .chart .checkout div:nth-child(2){
-        background-color: #1c1f25;
-        color: #fff;
-      } */
+      .chart .checkout a {
+        padding: 10px 30px;
+        border-radius: 10px;
+
+      } 
 
       .active .chart{
         left: calc(110% - 500px);
@@ -135,7 +147,7 @@
             <div class="d-flex me-5">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight:700"  href="#">Login</a>
+                        <a class="nav-link" style="font-weight:700"  href="/login">Login</a>
                     </li>
                     <li class="shopping">
                         <a class="nav-link" href="#">
@@ -149,21 +161,50 @@
         {{-- chart --}}
         <nav class="chart">
             <div class="d-flex me-5">
-                <ul class="navbar-nav">
-                    <h1>Chart</h1>
-                    <li class="closeShopping">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-xmark"></i>
-                        </a>
-                    </li>
+                <ul class=" navbar-nav">
+                    {{-- produk --}}
+                    <div class="chart-content">
+                        <div class="chart-box">
+                            <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
+                            <div class="detail-box">
+                                <div class="chart-produk-title">Wayang Ramayana</div>
+                                <div class="chart-price">Rp 12.000</div>
+                                <input type="number" value="1" class="chart-quantity">
+                            </div>
+                        </div>
+
+                        <div class="chart-box">
+                            <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
+                            <div class="detail-box">
+                                <div class="chart-produk-title">Wayang Ramayana</div>
+                                <div class="chart-price">Rp 12.000</div>
+                                <input type="number" value="1" class="chart-quantity">
+                            </div>
+                        </div>
+
+                        <div class="chart-box">
+                            <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
+                            <div class="detail-box">
+                                <div class="chart-produk-title">Wayang Ramayana</div>
+                                <div class="chart-price">Rp 12.000</div>
+                                <input type="number" value="1" class="chart-quantity">
+                            </div>
+                        </div>
+                    </div>
+
+
                 </ul>
             </div>
-            
+
+            {{-- total --}}
+            <div class="total ">
+                <div class="total-title">Total</div>
+                <div class="total-price">Rp0</div>
+            </div>
+
             <ul class="listCard"></ul>
             <div class="checkout d-flex justify-content-center align-items-center">
-                {{-- <div class="total">0</div>
-                <div class="closeShopping">close</div> --}}
-                <a href="#" class="btn btn-primary w-50">Bayar Sekarang</a>
+                <a href="#" class="btn btn-primary w-80">Bayar Sekarang</a>
             </div>
         </nav>
 
