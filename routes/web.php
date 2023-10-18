@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\authController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\sandiController;
 /*
@@ -16,8 +17,7 @@ use App\Http\Controllers\sandiController;
 Route::get('/', function () {
     return view('index');
 });
-
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('login');
 });
 
@@ -28,3 +28,5 @@ Route::get('/', function () {
 
 // Route::get('/', [sandiController::class, 'index']
 //     );
+Route::get('/register', [authController::class , 'register']);
+

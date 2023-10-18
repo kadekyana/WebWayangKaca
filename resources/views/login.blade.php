@@ -35,8 +35,11 @@
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
             <div class="col-md-6 left-box">
                 <div class="row align-items-center">
+        <div class="row rounded-5 p-5 bg-white shadow box-area d-flex justify-content-center align-items-center ">
+        <div class="col-md-6 left-box">
+                <form method="#" class="row align-items-center">
                     <div class="header-text text-center mb-4">
-                        <h3>login</h3>
+                        <h3>-LOGIN-</h3>
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
@@ -45,18 +48,20 @@
                         <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password">
                     </div>
                     <div class="input-group mb-3">
-                        <a href="#" class="btn btn-primary w-100">Login</a>
+                        <a href="/" class="btn btn-primary w-100">Login</a>
                     </div>
                     <div class="text-end mb-3">
-                        <a href="#">Daftar Sekarang</a>
+                        <a href="/register">Daftar Sekarang</a>
                     </div>
 
-                </div>
+                </form>
             </div>
             
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column right-box ">
                 <div class="featured-image">
                     <img src="{{ asset('image/hd.png') }}" class="img-fluid">
+                    <img src="{{ asset('image/wayang2.jpeg') }}" class="img-fluid" style="border-radius: 10px" width="max-content">
+
                 </div>
             </div>
 
