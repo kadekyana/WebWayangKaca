@@ -23,6 +23,16 @@ Route::get('/produk', function () {
     return view('produk');
 });
 
+Route::get('/detail', function () {
+    return view('detail');
+});
+
+Route::get('/history', function () {
+    return view('history');
+});
+
+
+
 Route::get('/', function () {
     return view('index');
 });

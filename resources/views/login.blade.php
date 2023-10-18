@@ -26,10 +26,6 @@
 </head>
 <body>
 
- {{-- <h1>data mahasiswa</h1>
- @for ($i = 1; $i < count($data); $i++ )
-    <p>{{$i+1}} {{$data($i)}}</p>
-@endfor --}}
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row border rounded-5 p-3 bg-white shadow box-area">

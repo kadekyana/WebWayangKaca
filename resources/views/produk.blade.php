@@ -132,13 +132,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">History</a>
+                        <a class="nav-link active" aria-current="page" href="/history">History</a>
                     </li>
                 </ul>
             </div>
@@ -168,7 +168,7 @@
                             <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
                             <div class="detail-box">
                                 <div class="chart-produk-title">Wayang Ramayana</div>
-                                <div class="chart-price">Rp 12.000</div>
+                                <div class="chart-price">Rp 50.000</div>
                                 <input type="number" value="1" class="chart-quantity">
                             </div>
                         </div>
@@ -177,7 +177,7 @@
                             <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
                             <div class="detail-box">
                                 <div class="chart-produk-title">Wayang Ramayana</div>
-                                <div class="chart-price">Rp 12.000</div>
+                                <div class="chart-price">Rp 50.000</div>
                                 <input type="number" value="1" class="chart-quantity">
                             </div>
                         </div>
@@ -186,12 +186,12 @@
                             <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
                             <div class="detail-box">
                                 <div class="chart-produk-title">Wayang Ramayana</div>
-                                <div class="chart-price">Rp 12.000</div>
+                                <div class="chart-price">Rp 50.000</div>
                                 <input type="number" value="1" class="chart-quantity">
                             </div>
                         </div>
+
                     </div>
-
 
                 </ul>
             </div>
@@ -222,7 +222,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Rp. 50.000</p>
-                    <a href="">Detail</a>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Rp. 50.000</p>
-                    <a href="">Detail</a>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Rp. 50.000</p>
-                    <a href="">Detail</a>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -252,7 +252,7 @@
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
                     <p>Rp. 50.000</p>
-                    <a href="">Detail</a>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -267,7 +267,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Rp. 50.000</p>
-                        <a href="">Detail</a>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Rp. 50.000</p>
-                        <a href="">Detail</a>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -287,7 +287,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Rp. 50.000</p>
-                        <a href="">Detail</a>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -297,7 +297,7 @@
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
                         <p>Rp. 50.000</p>
-                        <a href="">Detail</a>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
