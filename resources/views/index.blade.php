@@ -22,14 +22,16 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/product">Product</a>
+                        <a class="nav-link active" aria-current="page" href="/produk">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">History</a>
+                        <a class="nav-link active" aria-current="page" href="history">History</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" style="font-weight: 700;" href="/login">Login</a>
+                        <a class="nav-link" style="font-weight:700"  href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">

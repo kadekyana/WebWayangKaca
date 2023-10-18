@@ -32,7 +32,7 @@
                         <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password">
                     </div>
                     <div class="input-group mb-3">
-                        <a href="#" class="btn btn-primary w-100">Login</a>
+                        <a href="/" class="btn btn-primary w-100">Login</a>
                     </div>
                     <div class="text-end mb-3">
                         <a href="/register">Register Sekarang</a>

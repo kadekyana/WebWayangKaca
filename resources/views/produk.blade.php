@@ -39,6 +39,83 @@
         color: black;
         border: 1px solid;
       }
+      
+
+      /* chart */
+      .chart{
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 340px;
+        height: 80%;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+        border: 1px solid;
+        border-radius: 10px;
+    
+      }
+
+
+       .chart-box{
+        display: grid;
+        grid-template-columns: 32% 50% 18%;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .chart-img{
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        padding: 10px;
+      }
+
+      .total{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
+        border-top: 1px solid;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .total-title{
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .total-price{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .detail-box{
+        display: grid;
+        row-gap: 0.5rem;
+      }
+
+      .chart .checkout{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+
+      }
+
+      .chart .checkout a {
+        padding: 10px 30px;
+        border-radius: 10px;
+
+      } 
+
+      .active .chart{
+        left: calc(110% - 500px);
+      }
+
+      .active .container{
+        transform: translateX(-200px);
+      }
 
     </style>
 
@@ -61,7 +138,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">History</a>
+                        <a class="nav-link active" aria-current="page" href="/history">History</a>
                     </li>
                 </ul>
             </div>
@@ -70,9 +147,9 @@
             <div class="d-flex me-5">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" style="font-weight:700"  href="#">Login</a>
+                        <a class="nav-link" style="font-weight:700"  href="/login">Login</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="shopping">
                         <a class="nav-link" href="#">
                             <i class="bi bi-bag-heart-fill" ></i>
                         </a>
@@ -80,7 +157,59 @@
                 </ul>
             </div>
         </div>
+
+        {{-- chart --}}
+        <nav class="chart">
+            <div class="d-flex me-5">
+                <ul class=" navbar-nav">
+                    {{-- produk --}}
+                    <div class="chart-content">
+                        <div class="chart-box">
+                            <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
+                            <div class="detail-box">
+                                <div class="chart-produk-title">Wayang Ramayana</div>
+                                <div class="chart-price">Rp 50.000</div>
+                                <input type="number" value="1" class="chart-quantity">
+                            </div>
+                        </div>
+
+                        <div class="chart-box">
+                            <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
+                            <div class="detail-box">
+                                <div class="chart-produk-title">Wayang Ramayana</div>
+                                <div class="chart-price">Rp 50.000</div>
+                                <input type="number" value="1" class="chart-quantity">
+                            </div>
+                        </div>
+
+                        <div class="chart-box">
+                            <img src="{{ asset('image/hd.png')}}" alt="" class="chart-img">
+                            <div class="detail-box">
+                                <div class="chart-produk-title">Wayang Ramayana</div>
+                                <div class="chart-price">Rp 50.000</div>
+                                <input type="number" value="1" class="chart-quantity">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </ul>
+            </div>
+
+            {{-- total --}}
+            <div class="total ">
+                <div class="total-title">Total</div>
+                <div class="total-price">Rp0</div>
+            </div>
+
+            <ul class="listCard"></ul>
+            <div class="checkout d-flex justify-content-center align-items-center">
+                <a href="#" class="btn btn-primary w-80">Bayar Sekarang</a>
+            </div>
+        </nav>
+
     </nav>
+
 
     {{-- produk --}}
     <div class="container p-5 d-flex justify-content-center align-items-center">
@@ -92,8 +221,8 @@
                 <img src="{{ asset('image/hd.png') }}" alt="" />
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
-                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <p>Rp. 50.000</p>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -102,8 +231,8 @@
                 <img src="{{ asset('image/hd.png') }}" alt="" />
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
-                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <p>Rp. 50.000</p>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -112,8 +241,8 @@
                 <img src="{{ asset('image/hd.png') }}" alt="" />
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
-                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <p>Rp. 50.000</p>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -122,8 +251,8 @@
                 <img src="{{ asset('image/hd.png') }}" alt="" />
                 <div class="card-info">
                     <h2>Dwi Coders</h2>
-                    <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                    <a href="">OTW</a>
+                    <p>Rp. 50.000</p>
+                    <a href="/detail">Detail</a>
                 </div>
                 </div>
             </div>
@@ -137,8 +266,8 @@
                     <img src="{{ asset('image/hd.png') }}" alt="" />
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
-                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <p>Rp. 50.000</p>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -147,8 +276,8 @@
                     <img src="{{ asset('image/hd.png') }}" alt="" />
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
-                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <p>Rp. 50.000</p>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -157,8 +286,8 @@
                     <img src="{{ asset('image/hd.png') }}" alt="" />
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
-                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <p>Rp. 50.000</p>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -167,8 +296,8 @@
                     <img src="{{ asset('image/hd.png') }}" alt="" />
                     <div class="card-info">
                         <h2>Dwi Coders</h2>
-                        <p>Card Sederhana Untuk Menuju Ke Channel DwiCoders</p>
-                        <a href="">OTW</a>
+                        <p>Rp. 50.000</p>
+                        <a href="/detail">Detail</a>
                     </div>
                     </div>
                 </div>
@@ -179,6 +308,7 @@
         
     </div>
     </div>
-    
+    {{-- link java --}}
+    <script src="js/chart.js"></script>
 </body>
 </html>

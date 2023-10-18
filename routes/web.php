@@ -2,9 +2,7 @@
 
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\authController;
-use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\sandiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +15,35 @@ use App\Http\Controllers\sandiController;
 */
 
 
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/detail', function () {
+    return view('detail');
+});
+
+Route::get('/history', function () {
+    return view('history');
+});
+
+
+
+Route::get('/', function () {
+    return view('index');
+});
+
 
 
 Route::get('/login', [authController::class, 'login'])->name('Login');
 Route::get('/register', [authController::class , 'register'])->name('Register');
 
 // Admin Page -
-Route::get('/', [adminController::class, 'index']);
+Route::get('/admin', [adminController::class, 'index']);
 Route::get('/products', [adminController::class, 'products']);
 Route::get('/tambah_product', [adminController::class, 'tambah_product']);
 Route::post('/tambah', [adminController::class, 'tambah']);
