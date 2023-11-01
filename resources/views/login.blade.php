@@ -21,21 +21,40 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="row rounded-3 p-5 bg-white shadow box-area d-flex justify-content-center align-items-center ">
         <div class="col-md-6 left-box">
-                <form method="POST" row align-items-center">
-                    <div class="header-text text-center mb-4">
-                        <h3>-LOGIN-</h3>
+            <form method="POST" action="/loginPost" class="row align-items-center">
+                @csrf
+                <div class="header-text text-center mb-4">
+                    <h3>-LOGIN-</h3>
+                    @if (Session::has('success'))
+                       <div class="alert alert-success">
+                           <h5 class="text text-center">{{ Session::get('success')}}</h5>
+                       </div>
+                   @endif
+                    @if (Session::has('error'))
+                       <div class="alert alert-danger">
+                           <h5 class="text text-center">{{ Session::get('error')}}</h5>
+                       </div>
+                   @endif
+                @if ($errors->any())
+                   <div class="alert alert-danger">
+                           @foreach ($errors->all() as $error)
+                               <li>{{ $error }}</li>
+                           @endforeach
+                   </div>
+               @endif
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
+                        <input type="text" name="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password">
+                        <input type="password" name="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required>
                     </div>
                     <div class="input-group mb-3">
-                        <a href="/" class="btn btn-primary w-100">Login</a>
+                        <input type="submit" class="btn btn-primary w-100" value="Login">
                     </div>
                     <div class="text-end mb-3">
-                        <a href="/register">Register Sekarang</a>
+                        <span>Belum Punya Akun ?</span>
+                        <a href="/register" class="fw-bold">Register Sekarang</a>
                     </div>
 
                 </form>

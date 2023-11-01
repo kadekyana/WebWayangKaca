@@ -14,15 +14,22 @@ class adminController extends Controller
         return view('adminPage.index', compact(['products','users']));
     }
 
+    public function users()
+    {
+        $users = User::all();
+        return view('adminPage.users.user', compact('users'));
+    }
+
     public function products(){
         $products = Products::all();
-        return view('adminPage.products', compact('products'));
+        return view('adminPage.product.products', compact('products'));
     }
 
     public function tambah_product(){
-        return view('adminPage.create');
+        return view('adminPage.product.create');
     }
 
+    
     public function tambah(Request $request){
         $request->validate([
             'nama' => 'required|string',
@@ -45,18 +52,18 @@ class adminController extends Controller
             'stok' => $request->stok,
             'gambar' => $gambarNama,
         ]);
-        return redirect('/');
+        return redirect('/products');
     }
 
     public function hapus($id){
         $product = Products::find($id);
         $product->delete();
-        return redirect('/');
+        return redirect('/products');
     }
 
     public function edit($id){
         $product = Products::find($id);
-        return view('adminPage.edit', compact('product'));
+        return view('adminPage.product.edit', compact('product'));
     }
 
     public function up($id, Request $request){
@@ -80,8 +87,7 @@ class adminController extends Controller
                 'stok' => $request->stok,
                 'gambar' => $gambarNama,
             ]);
-            return redirect('/');
-
+            return redirect('/products');
         }else{
             $product->update([
                 'nama' => $request->nama,
@@ -89,7 +95,7 @@ class adminController extends Controller
                 'harga' => $formatharga,
                 'stok' => $request->stok,
             ]);
-            return redirect('/');
+            return redirect('/products');
         }
     }
 }
