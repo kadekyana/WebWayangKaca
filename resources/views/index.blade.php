@@ -26,7 +26,7 @@
                 <div class="card-info">
                     <h4>{{ $p -> nama }}</h4>
                     <p>Rp.{{ $p-> harga }}</p>
-                    <a href="">Details</a>
+                    <a href="detailProduct">Details</a>
                 </div>
                 </div>    
             </div>

@@ -19,8 +19,8 @@
         border-radius: 10px;
       }
       .card img {
-        width: 100%;
-        height: auto;
+        width: 200px;
+        height: 200px;
         border-radius: 10px;
       }
       .card-info {
