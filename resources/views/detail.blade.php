@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +39,7 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <!-- Logo on the left -->
@@ -66,7 +69,7 @@
                         <a class="nav-link" style="font-weight:700"  href="/login">Login</a>
                     </li>
                     <li class="shopping">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#cart">
                             <i class="bi bi-bag-heart-fill" ></i>
                         </a>
                     </li>
@@ -82,14 +85,14 @@
 
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box ">
                 <div class="featured-image">
-                    <img src="{{ asset('image/hd.png') }}" class="img-fluid">
+                    <img src="uploads/{{ $details->gambar }}" class="img-fluid">
                 </div>
             </div>
 
             <div class="col-md-6 right-box">
                 <div class="row align-items-center">
                     <div class="header-text text-center mb-4">
-                        <h3>Wayang Ramayana</h3>
+                        <h3>{{$details->nama}}</h3>
                     </div>
                     <div class="detail-produk">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eius aut ipsa voluptatum ad laborum incidunt esse corrupti accusamus? Distinctio est ad fuga dicta ipsam laudantium, consequatur fugiat perferendis soluta!</p>

@@ -1,5 +1,5 @@
 @include('header')
-
+@include('chart')
     <div class="container-fluid" style="background-color: #333333; height:100vh">
         <div class="row" style="height:100%">
             <div class="col d-flex justify-content-center align-items-center text-white" style="flex-direction: column">
@@ -26,7 +26,7 @@
                 <div class="card-info">
                     <h4>{{ $p -> nama }}</h4>
                     <p>Rp.{{ $p-> harga }}</p>
-                    <a href="detailProduct">Details</a>
+                    <a href="/detailProduct/{{ $p ->id }}">Details</a>
                 </div>
                 </div>    
             </div>

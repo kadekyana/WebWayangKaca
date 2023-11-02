@@ -1,4 +1,5 @@
 @include('header')
+@include('chart')
     {{-- produk --}}
 <div class="container-fluid p-2 d-flex justify-content-center align-items-center " style=" height:100vh">
     <div class="row mt-5 ms-3" style="height:100% ">
@@ -13,7 +14,7 @@
                 <div class="card-info">
                     <h5>{{ $p->nama }}</h5>
                     <p>Rp.{{ $p->harga }}</p>
-                    <a href="/detailProduct">Detail</a>
+                    <a href="/detailProduct/{{ $p ->id }}">Detail</a>
                 </div>
             </div>
         </div>

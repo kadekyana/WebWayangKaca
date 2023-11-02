@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // user 
-Route::get('/detailProduct', [userController::class, 'detailProduct']);
+Route::get('/detailProduct/{id}', [userController::class, 'detailProduct']);
+Route::get('/charts/{id}', [userController::class, 'charts']);
 
 // auth
 Route::get('/', [userController::class, 'index']);

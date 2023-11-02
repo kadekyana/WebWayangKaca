@@ -27,7 +27,13 @@ class userController extends Controller
         return view('history');
     }
 
-    public function detailProduct(){
-        return view('detail');
+    public function detailProduct($id){
+        $details = Products::find($id);
+        return view('detail', compact('details'));
+    }
+
+    public function charts($id){
+        $charts = Products::find($id);
+        return view('chart', compact('charts'));
     }
 }
