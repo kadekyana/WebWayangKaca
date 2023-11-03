@@ -22,6 +22,10 @@ Route::get('/', [userController::class, 'index']);
 Route::get('/History', [userController::class, 'historyPage']);
 Route::get('/Product', [userController::class, 'productPage']);
 
+
+Route::post('/checkout', [userController::class, 'checkout']);
+Route::get('/checkout/{id}/detail', [userController::class, 'detailCheck']);
+
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/login', [authController::class, 'login'])->name('Login');
     Route::post('/loginPost', [authController::class, 'loginPost'])->name('LoginPost');
@@ -35,6 +39,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/detailProduct/{id}', [userController::class, 'detailProduct']);
     Route::post('/tambahkeranjang/{id}', [userController::class, 'tambahkeranjang']);
     Route::get('/charts', [userController::class, 'charts'])->name('cart');
+    
     Route::delete('/hapus_cart/{id}', [userController::class, 'hapuscart']);
     Route::get('/admin', [adminController::class, 'index']);
     Route::get('/users', [adminController::class, 'users']);

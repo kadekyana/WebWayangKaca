@@ -32,12 +32,33 @@
                     </td>
                 </tr>
             @endforeach
+            
         </tbody>
     </table>
 
     <div class="text-right">
-        <p>Total: <strong>Rp {{ number_format($total, 0, ',', '.') }}</strong></p>
-        <a href="/checkout" class="btn btn-primary">Proceed to Checkout</a>
+        <form action="/checkout" method="POST"> <!-- Ganti route sesuai dengan route checkout Anda -->
+            @csrf
+            <!-- Input hidden untuk setiap ID produk -->
+            @foreach ($cartItems as $c)
+                <input type="hidden" name="product_ids[]" value="{{ $c->product->id }}">
+                <input type="hidden" name="sub_total" value="{{ $subtotal }}">
+            @endforeach
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" name="nama" value="{{ $user->name }}" id="nama" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="total" class="form-label">Total</label>
+                <input type="text" class="form-control" name="total" value="{{$total}}" id="total" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="alamat" class a="form-label">Alamat</label>
+                <input type="text" class="form-control" name="alamat" id="alamat">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Checkout</button>
+        </form>
     </div>
 </div>
 
