@@ -1,5 +1,4 @@
 @include('header')
-@include('chart')
     <div class="container-fluid" style="background-color: #333333; height:100vh">
         <div class="row" style="height:100%">
             <div class="col d-flex justify-content-center align-items-center text-white" style="flex-direction: column">
@@ -25,7 +24,7 @@
                 <img src="uploads/{{ $p -> gambar }}" alt="" />
                 <div class="card-info">
                     <h4>{{ $p -> nama }}</h4>
-                    <p>Rp.{{ $p-> harga }}</p>
+                    <p>Rp {{ number_format($p-> harga, 0 ,'.','.') }}</p>
                     <a href="/detailProduct/{{ $p ->id }}">Details</a>
                 </div>
                 </div>    

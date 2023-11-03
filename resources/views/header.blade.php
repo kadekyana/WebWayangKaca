@@ -124,7 +124,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <!-- Logo on the left -->
-            <a class="navbar-brand ms-5" style="font-weight: 700" href="#">
+            <a class="navbar-brand ms-5" style="font-weight: 700" href="/">
                 E-Commerce
             </a>
 
@@ -164,12 +164,12 @@
                       </div>
                     </li>
                     <li class="shopping">
-                        <a class="nav-link" href="#cart">
+                        <a class="nav-link" href="/charts">
                             <i class="bi bi-bag-heart-fill" ></i>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-
+    </nav>
         

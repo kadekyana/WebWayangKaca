@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Products;
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class adminController extends Controller
 {
     public function index(){
-        $products = Products::count();
+        $products = Product::count();
         $users = User::count();
         return view('adminPage.index', compact(['products','users']));
     }
@@ -21,7 +21,7 @@ class adminController extends Controller
     }
 
     public function products(){
-        $products = Products::all();
+        $products = Product::all();
         return view('adminPage.product.products', compact('products'));
     }
 
@@ -45,7 +45,7 @@ class adminController extends Controller
             $gambar->move(public_path('uploads'), $gambarNama);
         }
 
-        Products::create([
+        Product::create([
             'nama' => $request->nama,
             'deskripsi' => $request->deskripsi,
             'harga' => $request->harga,
@@ -54,20 +54,27 @@ class adminController extends Controller
         ]);
         return redirect('/products');
     }
+    
+    public function hapususer($id){
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/users');
+    }
+
 
     public function hapus($id){
-        $product = Products::find($id);
+        $product = Product::find($id);
         $product->delete();
         return redirect('/products');
     }
 
     public function edit($id){
-        $product = Products::find($id);
+        $product = Product::find($id);
         return view('adminPage.product.edit', compact('product'));
     }
 
     public function up($id, Request $request){
-        $product = Products::find($id);
+        $product = Product::find($id);
 
         $request->validate([
             'gambar' => 'mimes:png,jpg,jpeg|image|max:2040'

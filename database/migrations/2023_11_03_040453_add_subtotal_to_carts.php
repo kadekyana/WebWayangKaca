@@ -11,14 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('gambar');
-            $table->string('deskripsi');
-            $table->float('harga');
-            $table->integer('stok');
-            $table->timestamps();
+        Schema::table('carts', function (Blueprint $table) {
+            $table->integer('subtotal')->default(0);
         });
     }
 
@@ -27,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('carts', function (Blueprint $table) {
+            //
+        });
     }
 };

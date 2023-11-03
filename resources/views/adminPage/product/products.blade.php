@@ -51,7 +51,7 @@
                           </div>
                     </td>
                       <td class="align-middle text-center text-md">
-                        <span class="badge badge-md bg-gradient-primary">Rp.{{ $p -> harga }}</span>
+                        <span class="badge badge-md bg-gradient-primary">Rp.{{ number_format($p -> harga, 0 ,'.','.') }}</span>
                       </td>
                       <td class="align-middle text-center text-md">
                         <span class="badge badge-md bg-gradient-primary">{{ $p -> stok }}</span>
