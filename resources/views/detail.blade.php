@@ -3,13 +3,13 @@
         <div class="row border rounded-5 p-3 bg-white shadow box-area">
 
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box ">
-                <div class="featured-image">
-                    <img src="/uploads/{{ $product->gambar }}" class="img-fluid">
+                <div class="featured-image p-4" >
+                    <img src="/uploads/{{ $product->gambar }}" class="img-fluid" style="height: 450px; width:450px; border-radius:20px;">
                 </div>
             </div>
 
-            <div class="col-md-6 right-box mt-5">
-                <div class="row">
+            <div class="col-md-6 right-box" style="display: flex; justify-content:center; align-items:center;" >
+                <div class="row" style="">
                     <div class="header-text text-center mb-4">
                         <h3>{{$product->nama}}</h3>
                     </div>
