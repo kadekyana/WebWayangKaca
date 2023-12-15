@@ -5,8 +5,8 @@
                 <h1>Wayang Kaca</h1>
                 <p class="text text-center">Karya Seni Unik Dari Desa NagaSepaha - Kabupaten Buleleng - Provinsi Bali</p>  
                 <div class="content" style="display:flex; width:220px;justify-content:space-between">
-                    <a class="btn btn-primary btn-lg" href="#" role="button">History</a>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Product</a>
+                    <a class="btn btn-primary btn-lg" href="/History" role="button">History</a>
+                    <a class="btn btn-primary btn-lg" href="/Product" role="button">Product</a>
                 </div>
             </div>
             <div class="col d-flex justify-content-center align-items-center">

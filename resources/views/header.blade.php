@@ -165,6 +165,11 @@
                           </form>
                       </div>
                     </li>
+                    <li class="">
+                        <a class="nav-link" href="/pembayaran/{order_id}">
+                            <i class="bi bi-cart-check-fill"></i>
+                        </a>
+                    </li>
                     <li class="shopping">
                         <a class="nav-link" href="/charts">
                             <i class="bi bi-bag-heart-fill" ></i>

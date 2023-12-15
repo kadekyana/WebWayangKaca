@@ -92,19 +92,22 @@ public function checkout(Request $request)
         // $request->request->add(['status' => 'Belum Bayar']);
         $productIds = $request->input('product_ids');
         $subtotal = $request->input('subtotal');
+        $user = auth()->user();
+
 
         $order = Order::create([
-            'nama'=> $request->input('nama'),
-            'total'=> $request->input('total'),
-            'alamat'=> $request->input('alamat'),
+            'user_id' => auth()->user()->id,
+            'nama' => $request->input('nama'),
+            'total' => $request->input('total'),
+            'alamat' => $request->input('alamat'),
             'status' => 'Belum Bayar'
         ]);
-
-                $cartItems = Cart::whereIn('product_id', $productIds)->get();
-
+            
+        $cartItems = Cart::whereIn('product_id', $productIds)->get();
+        $order_id = $order->id;
         foreach ($cartItems as $cartItem) {
             OrderDetail::create([
-                'order_id' => $order->id,
+                'order_id' => $order_id,
                 'product_id' => $cartItem->product_id,
                 'jumlah' => $cartItem->quantity,
                 'harga' => $cartItem->product->harga,
@@ -112,7 +115,6 @@ public function checkout(Request $request)
             ]);
         }
 
-        // Simpan total_amount ke dalam pesanan
         $order->save();
 
                 // Set your Merchant Server Key
@@ -145,6 +147,8 @@ public function checkout(Request $request)
         $orderDetails = OrderDetail::where('order_id', $id)->get();
         return view('detailpesanan', compact('order', 'orderDetails'));
     }
+
+
 
 
 }

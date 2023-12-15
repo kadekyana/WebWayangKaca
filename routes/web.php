@@ -24,6 +24,7 @@ Route::get('/Product', [userController::class, 'productPage']);
 
 
 Route::post('/checkout', [userController::class, 'checkout']);
+Route::get('/pembayaran/{order_id}', [userController::class, 'pembayaran'])->name('pembayaran');
 Route::get('/checkout/{id}/detail', [userController::class, 'detailCheck']);
 
 Route::group(['middleware' => 'guest'], function () {

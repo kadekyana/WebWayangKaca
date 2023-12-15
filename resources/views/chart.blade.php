@@ -37,9 +37,8 @@
     </table>
 
     <div class="text-right">
-        <form action="/checkout" method="POST"> <!-- Ganti route sesuai dengan route checkout Anda -->
+        <form action="/checkout" method="POST"> 
             @csrf
-            <!-- Input hidden untuk setiap ID produk -->
             @foreach ($cartItems as $c)
                 <input type="hidden" name="product_ids[]" value="{{ $c->product->id }}">
                 <input type="hidden" name="sub_total" value="{{ $subtotal }}">
