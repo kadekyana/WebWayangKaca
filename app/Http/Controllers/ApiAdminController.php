@@ -86,6 +86,4 @@ public function deleteProduct($id)
     }
 }
 
-// Sisanya dapat diubah sesuai kebutuhan, dengan mengganti 'return view(...)' dengan 'return response()->json(...)'
-
 }
