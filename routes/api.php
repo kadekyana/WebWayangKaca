@@ -23,7 +23,7 @@ Route::get('/admin/products', [ApiAdminController::class, 'getProducts']);
 Route::post('/admin/products/create', [ApiAdminController::class, 'createProduct']);
 Route::delete('/admin/users/{id}', [ApiAdminController::class, 'deleteUser']);
 Route::delete('/admin/products/{id}', [ApiAdminController::class, 'deleteProduct']);
-Route::put('/admin/products/{id}', [ApiAdminController::class, 'updateProduct']);
+Route::post('/admin/update/{id}', [ApiAdminController::class, 'update']);
 
 Route::post('/login', [ApiAuthController::class, 'loginPost']);
 Route::post('/logout', [ApiAuthController::class, 'logout']);

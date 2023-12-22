@@ -77,7 +77,11 @@ class adminController extends Controller
         $product = Product::find($id);
 
         $request->validate([
-            'gambar' => 'mimes:png,jpg,jpeg|image|max:2040'
+            'nama' => 'required|string',
+            'deskripsi' => 'required|string',
+            'harga' => 'required|integer',
+            'stok' => 'required|integer',
+            'gambar' => 'mimes:png,jpg,jpeg|image'
         ]);
 
         $formatharga =number_format($request->harga,0, ',' , '.',);
